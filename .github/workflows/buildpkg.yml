@@ -18,7 +18,7 @@ jobs:
           buildah from --name ctnr docker.io/library/archlinux:base-devel
 
           buildah run ctnr pacman-key --init
-          buildah run ctnr pacman --noconfirm -Syu
+          buildah run ctnr pacman --noconfirm -Syu git
           buildah run ctnr pacman --noconfirm -Sc
 
           buildah run ctnr useradd -m dev
